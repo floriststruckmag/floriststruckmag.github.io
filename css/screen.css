@@ -1,0 +1,534 @@
+/*! chota.css v0.5.1 | MIT License | github.com/jenil/chota */
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+  line-height: 1.15;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+body {
+  letter-spacing: 0.01em;
+  line-height: 1.6;
+  font-weight: 400;
+  font-family: "Segoe UI", "Helvetica Neue", sans-serif; /*fallback*/
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  background: url("https://cdn.glitch.com/562de8a5-a405-4e7e-9d7d-452318f6cb63%2Fbg-white-01.png?1544931857759") no-repeat center center fixed;
+  background-color: rgba(255, 255, 255, .3);
+  background-blend-mode: lighten;
+/*background: url("https://cdn.glitch.com/562de8a5-a405-4e7e-9d7d-452318f6cb63%2Fbackground.png?1544930325556") no-repeat center center fixed; */
+  background-size: cover;
+
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 500;
+  margin: 0.35em 0 0.7em 0;
+}
+h1 {
+  font-size: 48px;
+  font-family: "Gill Sans";
+}
+h-t {
+  font-size: 64px;
+  font-family: "Gill Sans";
+  text-align: center;
+  width: 100%;
+  display: inline-block;
+}
+h2 {
+  font-family: "Gill Sans";
+  font-size: 24px;
+}
+h2-s {
+  font-family: "Gill Sans";
+  font-size: 16px;
+  color: #474747;
+}
+h3 {
+  font-size: 1.5em;
+}
+h4 {
+  font-size: 1.25em;
+}
+h5 {
+  font-size: 1em;
+}
+h6 {
+  font-size: 0.85em;
+}
+a {
+  color: #878787;
+  text-decoration: none;
+  font-family: "Gill Sans";
+  font-size: 24px;
+  line-height: 4;
+}
+a:hover:not(.button) {
+  color: #232323;
+}
+p {
+  margin-top: 0;
+  font-family: "Gill Sans";
+  font-size: 16px;
+}
+p-t {
+  font-family: "Gill Sans";
+  font-size: 16px;
+}
+p-h {
+  margin-top: 0;
+  font-family: "Gill Sans";
+  font-size: 20px;
+  visibility: hidden;
+}
+
+
+.wave {
+  opacity: .3;
+  z-index: -1;
+  overflow: hidden;
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 70vh;
+}
+
+.wave--show {
+  opacity: .5;
+  filter: none;
+  transform: translate3d(0,0,0);
+  transition: opacity 920ms cubic-bezier(.25, .46, .45, .94), transform 920ms cubic-bezier(.25, .46, .45, .94);
+}
+
+.wave__cont {
+  height: 100%;
+  width: 200%;
+  transform: translate3d(-25%, 40%, 0);
+  animation: wave1 5530ms cubic-bezier(.405, .03, .515, .955) infinite both;
+}
+
+.wave__cont:after {
+  content: ' ';
+  display: block;
+  background-color: #f4d5cd;
+  height: 100%;
+  transform: rotate(2.5deg);
+  transform-origin: top center;
+  animation: wave2 4000ms cubic-bezier(.405, .03, .515, .955) infinite both;
+}
+
+@keyframes wave1 {
+  0%, 100% {
+		-webkit-transform: translate3d(-25%, 40%, 0);
+		-moz-transform: translate3d(-25%, 40%, 0);
+		-o-transform: translate3d(-25%, 40%, 0);
+		-ms-transform: translate3d(-25%, 40%, 0);
+		transform: translate3d(-25%, 40%, 0)
+	}
+	50% {
+		-webkit-transform: translate3d(-25%, 30%, 0);
+		-moz-transform: translate3d(-25%, 30%, 0);
+		-o-transform: translate3d(-25%, 30%, 0);
+		-ms-transform: translate3d(-25%, 30%, 0);
+		transform: translate3d(-25%, 30%, 0)
+	}
+}
+
+@keyframes wave2 {
+  0%, 100% {
+		-webkit-transform: rotate(2.5deg);
+		-moz-transform: rotate(2.5deg);
+		-o-transform: rotate(2.5deg);
+		-ms-transform: rotate(2.5deg);
+		transform: rotate(2.5deg)
+	}
+	50% {
+		-webkit-transform: rotate(-2.5deg);
+		-moz-transform: rotate(-2.5deg);
+		-o-transform: rotate(-2.5deg);
+		-ms-transform: rotate(-2.5deg);
+		transform: rotate(-2.5deg)
+	}
+}
+
+.content {
+  position: relative;
+  top: 100vh;
+}
+.wow {
+  visibility: hidden;
+}
+.empty-div {
+  display: block;
+  height: .1vh;
+}
+.poem-content {
+  position: relative;
+  display: block;
+  top: 50vh;
+  width: 50%;
+  padding: 3%;
+  transform: translateX(-50px);
+  font-size: 24px !important;
+  line-height: 48px;
+  color: #474747;
+/*  background: rgb(242, 181, 174, .5); */
+}
+.poem-content a {
+  color: #474747;
+  
+}
+
+#logo {
+  font-family: "Gill Sans";
+  display: block;
+  position: relative;
+  overflow: hidden;
+  height: inherit;
+  transform: scale(1.5); 
+  margin-left: 25%;
+  margin-top: 20%;
+}
+
+#logo-click {
+  display: inline-block;
+  position: relative;
+}
+
+.translated {
+  transform: translate(-40%, 100px) scale(.7) !important;
+}
+
+.translated-img {
+  transform: translate(30%, -100px) !important;
+}
+
+.translated-container {
+  transform: translate(-80%, 100px) !important;
+}
+
+.sticky {
+  position: fixed !important;
+  transform: translateY(-260px) !important;
+  margin-left: 110px !important;
+  z-index: 23;
+}
+
+.nav {
+  display: none;
+}
+
+.navbar {
+  z-index: 23;
+}
+
+#nav-0 {
+  position: fixed;
+  top: 0;
+  transform: translateY(185px);
+  left: 550px;
+  display: none;
+  font-family: "Gill Sans";
+  z-index: 23;
+}
+
+#nav-1 {
+  position: fixed;
+  top: 0;
+  transform: translateY(185px);
+  left: 650px;
+  display: none;
+  font-family: "Gill Sans";
+  z-index: 23;
+}
+
+#nav-2 {
+  position: fixed;
+  top: 0;
+  transform: translateY(150px) scale(.7);
+  left: 730px;
+  display: none;
+  font-family: "Gill Sans";
+  z-index: 23;
+}
+
+#nav-2-mod {
+  position: fixed;
+  top: 0;
+  transform: translateY(150px) scale(.6);
+  left: 730px;
+  display: none;
+  font-family: "Gill Sans";
+  z-index: 23;
+}
+
+#nav-3 {
+  position: fixed;
+  top: 0;
+  transform: translateY(150px) scale(.7);
+  left: 850px;
+  display: none;
+  font-family: "Gill Sans";
+  z-index: 23;
+}
+
+#nav-3-mod {
+  position: fixed;
+  top: 0;
+  transform: translateY(150px) scale(.6);
+  left: 850px;
+  display: none;
+  font-family: "Gill Sans";
+  z-index: 23;
+}
+
+#nav-4 {
+  position: fixed;
+  top: 0;
+  transform: translateY(150px) scale(.7);
+  left: 970px;
+  display: none;
+  font-family: "Gill Sans";
+  z-index: 23;
+}
+
+#nav-4-mod {
+  position: fixed;
+  top: 0;
+  transform: translateY(150px) scale(.6);
+  left: 970px;
+  display: none;
+  font-family: "Gill Sans";
+  z-index: 23;
+}
+
+.background-1 {
+  position: relative;
+  top: 50vh;
+  float: left;
+  margin: 10vw;
+  width: 80vw;
+  height: 200vh;
+  background: rgb(222, 212, 244, .5);
+}
+
+.footer-flex {
+  display: flex;
+  text-align: center;
+}
+
+.footer-anchor {
+  font-size: 18px;
+  font-weight: 400;
+  letter-spacing: 1.5px;
+  color: #474747;
+  width: 100%;
+  margin: auto;
+  font-family: "Gill Sans";
+}
+
+.footer-anchor:hover {
+  font-weight: 500 !important;
+}
+
+p-f {
+  display: block;
+  font-family: "EB Garamond";
+  letter-spacing: 2px;
+  font-size: 12px;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.white-space {
+  height: 110vh;
+}
+
+.duang {
+  display: inline-block !important;
+}
+
+.nav-img {
+  position: relative;
+  float: left;
+  height: 30px;
+  width: 60px;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#nav-img-2 {
+  position: relative;
+  float: left;
+  height: 40px;
+  width: 140px;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#nav-img-3 {
+  position: relative;
+  float: left;
+  height: 40px;
+  width: 140px;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#nav-img-4 {
+  position: relative;
+  float: left;
+  height: 40px;
+  width: 140px;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.normal-nav {
+  position: fixed !important;
+  transform: translateY(-260px) !important;
+  margin-left: 110px !important;
+  z-index: 23;
+}
+
+.normal-sticky {
+  position: fixed !important;
+  transform: translateY(88px) translateX(18px) !important;
+ /* margin-left: 110px !important; */
+  z-index: 23;
+}
+
+.normal-sticky-mod {
+  position: fixed !important;
+  transform: translateY(78px) translateX(18px) scale(.55) !important;
+ /* margin-left: 110px !important; */
+  z-index: 23;
+}
+
+.issue-header {
+  display: inline-block;
+/*  padding-top: 200px; */
+  font-family: "Gill Sans";
+  font-size: 16px;
+}
+
+.poem-img {
+  padding-top: 15vh;
+}
+
+.poem-img a {
+  font-family: "Gill Sans";
+  color: #232323;
+}
+
+.poem-img a:hover {
+  color: #f1c1c6;
+  opacity: 1 !important;
+}
+
+.giant-wrapper {
+  margin-top: 20vh;
+}
+
+:focus {
+  outline-color: transparent !important;
+  outline-style: none !important;
+  box-shadow: none !important;
+  -webkit-appearance: none;
+}
+
+.issue-title a:hover {
+  filter: invert(82%) sepia(14%) saturate(489%) hue-rotate(305deg) brightness(97%) contrast(96%) opacity(30%);
+}
+
+.more-button a {
+  padding-left: 30px;
+  padding-top: 8px;
+  padding-right: 30px;
+  padding-bottom: 8px;
+  margin-top: 8px;
+  margin-left: 8px;
+  display: center;
+  width: 100px;
+  background-color: transparent;
+  color: #232323;
+  font-family: 'Gill Sans';
+  font-size: 24px;
+  border: solid;
+  border-width: 1px;
+  border-color: #232323;
+  border-radius: 0px;
+}
+
+.more-button a:hover {
+  background-color: #f1c1c6 !important;
+  opacity: .5 !important;
+}
+
+input:focus {
+  outline-color: transparent !important;
+  outline-style: none !important;
+  box-shadow: none !important;
+  -webkit-appearance: none;
+  background-color: rgba(241, 193, 198, .3) !important;
+  transition: none !important;
+}
+
+textarea:focus {
+  outline-color: transparent !important;
+  outline-style: none !important;
+  box-shadow: none !important;
+  -webkit-appearance: none;
+  background-color: rgba(241, 193, 198, .3) !important;
+  transition: none !important;
+}
+
+[type=submit] {
+  transition: none !important;
+}
+
+[type=submit]:hover {
+  outline-color: transparent !important;
+  outline-style: none !important;
+  box-shadow: none !important;
+  background-color: #f1c1c6 !important;
+  opacity: .5 !important;
+}
+
+
+
+[data-aos='flower-transition'] {
+  opacity: 0;
+  transition-property: opacity;
+}
+[data-aos='flower-transition'].aos-animate {
+  opacity: 1;
+}
+
+body[data-aos-easing="flower-easing-1"] [data-aos], [data-aos][data-aos][data-aos-easing="flower-easing-1"] {
+  transition-timing-function: cubic-bezier(0.35, 0.006, 0.51, 0.95);
+}
+
+[data-aos="logo-animation"] {
+  opacity: 0;
+  transition-property: transform, opacity;
+}
+[data-aos="logo-animation"].aos-animate {
+  opacity: 1;
+  transform: translate(-50%, 100px) scale(.7);
+}
